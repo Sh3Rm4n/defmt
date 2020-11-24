@@ -419,6 +419,14 @@ fn main() -> ! {
         defmt::info!("true, [1, 2]: {:?}", dhcp_repr);
     }
 
+    defmt::info!(
+        "i128: 0 = {:i128}, -1 = {:i128}, MAX = {:i128}, MIN = {:i128}",
+        0,
+        -1,
+        i128::max_value(),
+        i128::min_value()
+    );
+
     loop {
         debug::exit(debug::EXIT_SUCCESS)
     }
